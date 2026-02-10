@@ -496,6 +496,14 @@ ul {
   animation: float 6s ease-in-out infinite;
 }
 
+.hero-logo-img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 20px 60px rgba(0, 0, 0, 0.15));
+  animation: float 6s ease-in-out infinite;
+}
+
 /* Steam animation */
 .steam {
   animation: steam-rise 3s ease-in-out infinite;
@@ -508,6 +516,17 @@ ul {
 @keyframes steam-rise {
   0%, 100% { transform: translateY(0); opacity: 0.3; }
   50% { transform: translateY(-15px); opacity: 0.05; }
+}
+
+/* Star twinkle */
+.star { animation: twinkle 3s ease-in-out infinite; }
+.star-1 { animation-delay: 0s; }
+.star-2 { animation-delay: 1s; }
+.star-3 { animation-delay: 2s; }
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.45; }
 }
 
 @keyframes float {
@@ -1189,6 +1208,10 @@ ul {
    RESPONSIVE DESIGN
    =========================== */
 @media (max-width: 1024px) {
+  .nav-phone {
+    display: none;
+  }
+
   .hero-container {
     grid-template-columns: 1fr;
     text-align: center;
