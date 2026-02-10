@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Second Avenue Pizza | Sandpoint, Idaho</title>
+  <meta name="description" content="Handcrafted, fresh pizzas in Sandpoint, Idaho. Specialty pizzas, calzones, salads, sandwiches & more since the heart of downtown.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <img src="images/logo.png" alt="Second Avenue Pizza" class="logo-img">
+        <span class="logo-text">Second Avenue<br><span class="logo-accent">Pizza</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#specials">Specials</a></li>
+        <li><a href="#hours">Hours</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="tel:208-263-9321" class="nav-phone">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <span>208-263-9321</span>
+        </a>
+        <a href="#contact" class="btn btn-primary nav-cta">Order Now</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <span class="hero-badge animate-fade-up">EST. in Sandpoint, Idaho</span>
+        <h1 class="hero-title animate-fade-up delay-1">
+          Fresh, Handcrafted<br>
+          Pizza That's <span class="text-gradient">Out of This World</span>
+        </h1>
+        <p class="hero-subtitle animate-fade-up delay-2">
+          Made with fresh ingredients, never mass-produced. Every pizza is a handcrafted creation made just for you.
+        </p>
+        <div class="hero-actions animate-fade-up delay-3">
+          <a href="#menu" class="btn btn-primary btn-lg">View Our Menu</a>
+          <a href="tel:208-263-9321" class="btn btn-outline btn-lg">Call to Order</a>
+        </div>
+        <div class="hero-stats animate-fade-up delay-4">
+          <div class="stat">
+            <span class="stat-number">7<small>lb</small></span>
+            <span class="stat-label">Juke Box Special</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-number">20+</span>
+            <span class="stat-label">Specialty Pizzas</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-number">Free</span>
+            <span class="stat-label">Wi-Fi Available</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual animate-fade-up delay-2">
+        <div class="hero-image-wrapper">
+          <div class="hero-glow"></div>
+          <svg class="hero-pizza-illustration" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+            <!-- Pizza base -->
+            <circle cx="250" cy="250" r="220" fill="#E8A849" />
+            <circle cx="250" cy="250" r="210" fill="#D4913A" />
+            <!-- Sauce -->
+            <circle cx="250" cy="250" r="190" fill="#C0392B" />
+            <!-- Cheese -->
+            <circle cx="250" cy="250" r="185" fill="#F5CBA7" opacity="0.9" />
+            <!-- Pepperoni -->
+            <circle cx="180" cy="170" r="22" fill="#A93226" />
+            <circle cx="310" cy="150" r="20" fill="#A93226" />
+            <circle cx="340" cy="280" r="22" fill="#A93226" />
+            <circle cx="200" cy="320" r="20" fill="#A93226" />
+            <circle cx="260" cy="220" r="18" fill="#A93226" />
+            <circle cx="160" cy="260" r="19" fill="#A93226" />
+            <circle cx="300" cy="350" r="17" fill="#A93226" />
+            <!-- Pepperoni highlights -->
+            <circle cx="175" cy="165" r="8" fill="#C0392B" opacity="0.6" />
+            <circle cx="305" cy="145" r="7" fill="#C0392B" opacity="0.6" />
+            <circle cx="335" cy="275" r="8" fill="#C0392B" opacity="0.6" />
+            <circle cx="195" cy="315" r="7" fill="#C0392B" opacity="0.6" />
+            <!-- Green peppers -->
+            <path d="M220 180 Q230 160 240 180" stroke="#27AE60" stroke-width="6" fill="none" stroke-linecap="round" />
+            <path d="M280 300 Q290 280 300 300" stroke="#27AE60" stroke-width="6" fill="none" stroke-linecap="round" />
+            <path d="M140 210 Q150 190 160 210" stroke="#27AE60" stroke-width="5" fill="none" stroke-linecap="round" />
+            <!-- Cheese drip details -->
+            <ellipse cx="220" cy="250" rx="30" ry="15" fill="#FAD7A0" opacity="0.4" />
+            <ellipse cx="300" cy="200" rx="25" ry="12" fill="#FAD7A0" opacity="0.4" />
+            <!-- Slice lines -->
+            <line x1="250" y1="30" x2="250" y2="470" stroke="#D4913A" stroke-width="2" opacity="0.3" />
+            <line x1="30" y1="250" x2="470" y2="250" stroke="#D4913A" stroke-width="2" opacity="0.3" />
+            <line x1="95" y1="95" x2="405" y2="405" stroke="#D4913A" stroke-width="2" opacity="0.3" />
+            <line x1="405" y1="95" x2="95" y2="405" stroke="#D4913A" stroke-width="2" opacity="0.3" />
+            <!-- Outer crust highlight -->
+            <circle cx="250" cy="250" r="220" fill="none" stroke="#C98B30" stroke-width="3" />
+            <!-- Steam -->
+            <path d="M180 40 Q185 20 190 40" stroke="#999" stroke-width="2" fill="none" opacity="0.3" class="steam steam-1" />
+            <path d="M250 25 Q255 5 260 25" stroke="#999" stroke-width="2" fill="none" opacity="0.3" class="steam steam-2" />
+            <path d="M320 40 Q325 20 330 40" stroke="#999" stroke-width="2" fill="none" opacity="0.3" class="steam steam-3" />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <!-- Scrolling marquee -->
+    <div class="marquee">
+      <div class="marquee-track">
+        <span>Fresh Ingredients</span><span class="marquee-dot">&#9679;</span><span>Handcrafted Daily</span><span class="marquee-dot">&#9679;</span><span>Made Just for You</span><span class="marquee-dot">&#9679;</span><span>Love at First Bite</span><span class="marquee-dot">&#9679;</span><span>Fresh Ingredients</span><span class="marquee-dot">&#9679;</span><span>Handcrafted Daily</span><span class="marquee-dot">&#9679;</span><span>Made Just for You</span><span class="marquee-dot">&#9679;</span><span>Love at First Bite</span><span class="marquee-dot">&#9679;</span><span>Fresh Ingredients</span><span class="marquee-dot">&#9679;</span><span>Handcrafted Daily</span><span class="marquee-dot">&#9679;</span><span>Made Just for You</span><span class="marquee-dot">&#9679;</span><span>Love at First Bite</span><span class="marquee-dot">&#9679;</span>
+      </div>
+      <div class="marquee-track" aria-hidden="true">
+        <span>Fresh Ingredients</span><span class="marquee-dot">&#9679;</span><span>Handcrafted Daily</span><span class="marquee-dot">&#9679;</span><span>Made Just for You</span><span class="marquee-dot">&#9679;</span><span>Love at First Bite</span><span class="marquee-dot">&#9679;</span><span>Fresh Ingredients</span><span class="marquee-dot">&#9679;</span><span>Handcrafted Daily</span><span class="marquee-dot">&#9679;</span><span>Made Just for You</span><span class="marquee-dot">&#9679;</span><span>Love at First Bite</span><span class="marquee-dot">&#9679;</span><span>Fresh Ingredients</span><span class="marquee-dot">&#9679;</span><span>Handcrafted Daily</span><span class="marquee-dot">&#9679;</span><span>Made Just for You</span><span class="marquee-dot">&#9679;</span><span>Love at First Bite</span><span class="marquee-dot">&#9679;</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hours & Location -->
+  <section class="hours" id="hours">
+    <div class="container">
+      <div class="hours-grid">
+        <div class="hours-content">
+          <span class="section-tag">Visit Us</span>
+          <h2 class="section-title">Hours & <span class="text-gradient">Location</span></h2>
+          <div class="hours-list">
+            <div class="hours-row">
+              <span class="day">Monday</span>
+              <span class="time closed">Closed</span>
+            </div>
+            <div class="hours-row">
+              <span class="day">Tuesday &ndash; Thursday</span>
+              <span class="time">11:00 AM &ndash; 9:00 PM</span>
+            </div>
+            <div class="hours-row">
+              <span class="day">Friday &ndash; Saturday</span>
+              <span class="time">11:00 AM &ndash; 9:30 PM</span>
+            </div>
+            <div class="hours-row">
+              <span class="day">Sunday</span>
+              <span class="time">2:00 PM &ndash; 8:00 PM</span>
+            </div>
+          </div>
+          <div class="hours-info">
+            <div class="info-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+              <span>Delivery: 5:00 PM &ndash; 9:00 PM</span>
+            </div>
+            <div class="info-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+              <span>Closed on Easter, Thanksgiving &amp; Christmas</span>
+            </div>
+            <div class="info-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              <span>Free Wi-Fi Available</span>
+            </div>
+          </div>
+        </div>
+        <div class="hours-map">
+          <div class="map-card">
+            <div class="map-placeholder">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2648.8!2d-116.5533!3d48.2766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5363d30fa8b6d7a9%3A0x7a4c0b5a4f1b0a0!2s215%20S%202nd%20Ave%2C%20Sandpoint%2C%20ID%2083864!5e0!3m2!1sen!1sus!4v1707500000000!5m2!1sen!1sus"
+                width="100%"
+                height="100%"
+                style="border:0; border-radius: 16px;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Second Avenue Pizza Location">
+              </iframe>
+            </div>
+            <div class="map-info">
+              <div class="map-address">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <div>
+                  <strong>215 S. Second Avenue</strong><br>
+                  Sandpoint, Idaho 83864
+                </div>
+              </div>
+              <a href="https://maps.google.com/?q=215+S+2nd+Ave+Sandpoint+ID+83864" target="_blank" rel="noopener" class="btn btn-outline">Get Directions</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section class="menu" id="menu">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Menu</span>
+        <h2 class="section-title">Crafted with <span class="text-gradient">Passion</span></h2>
+        <p class="section-subtitle">From classic favorites to creative specialties, there's something for everyone</p>
+      </div>
+
+      <!-- Menu Categories -->
+      <div class="menu-tabs">
+        <button class="menu-tab active" data-category="pizza">Pizza</button>
+        <button class="menu-tab" data-category="calzones">Calzones</button>
+        <button class="menu-tab" data-category="sandwiches">Sandwiches</button>
+        <button class="menu-tab" data-category="salads">Salads</button>
+        <button class="menu-tab" data-category="sides">Sides & Drinks</button>
+      </div>
+
+      <!-- Pizza Menu -->
+      <div class="menu-grid" id="menuGrid">
+        <div class="menu-card" data-category="pizza">
+          <div class="menu-card-badge">Popular</div>
+          <div class="menu-card-icon">
+            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="40" cy="40" r="35" fill="#D4913A"/>
+              <circle cx="40" cy="40" r="30" fill="#C0392B" opacity="0.8"/>
+              <circle cx="30" cy="32" r="6" fill="#A93226"/>
+              <circle cx="50" cy="38" r="5" fill="#A93226"/>
+              <circle cx="38" cy="50" r="5.5" fill="#A93226"/>
+            </svg>
+          </div>
+          <h3 class="menu-card-title">Build Your Own</h3>
+          <p class="menu-card-desc">Start with our fresh dough and homemade sauce, then choose from our wide selection of premium toppings</p>
+          <span class="menu-card-tag">Customizable</span>
+        </div>
+
+        <div class="menu-card" data-category="pizza">
+          <div class="menu-card-badge hot">7 lbs!</div>
+          <div class="menu-card-icon">
+            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="40" cy="40" r="38" fill="#E8A849"/>
+              <circle cx="40" cy="40" r="34" fill="#D4913A"/>
+              <circle cx="40" cy="40" r="30" fill="#C0392B" opacity="0.7"/>
+              <circle cx="40" cy="40" r="28" fill="#F5CBA7" opacity="0.5"/>
+              <text x="40" y="44" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">MEGA</text>
+            </svg>
+          </div>
+          <h3 class="menu-card-title">Juke Box Special</h3>
+          <p class="menu-card-desc">Our legendary 7-pound pizza! A monstrous creation loaded with toppings that's perfect for sharing with the whole crew</p>
+          <span class="menu-card-tag">Legendary</span>
+        </div>
+
+        <div class="menu-card" data-category="pizza">
+          <div class="menu-card-icon">
+            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="40" cy="40" r="35" fill="#D4913A"/>
+              <circle cx="40" cy="40" r="30" fill="#F5CBA7" opacity="0.8"/>
+              <circle cx="28" cy="30" r="4" fill="#27AE60"/>
+              <circle cx="50" cy="35" r="4" fill="#27AE60"/>
+              <circle cx="35" cy="50" r="4" fill="#C0392B"/>
+              <circle cx="48" cy="48" r="3" fill="#8B4513"/>
+            </svg>
+          </div>
+          <h3 class="menu-card-title">Schweitzer Ski Flake</h3>
+          <p class="menu-card-desc">Spinach, tomatoes, feta cheese, garlic, mushrooms, black olives, and Asiago cheese</p>
+          <span class="menu-card-tag">Specialty</span>
+        </div>
+
+        <div class="menu-card" data-category="pizza">
+          <div class="menu-card-icon">
+            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="40" cy="40" r="35" fill="#D4913A"/>
+              <circle cx="40" cy="40" r="30" fill="#F5CBA7" opacity="0.8"/>
+              <circle cx="30" cy="32" r="5" fill="#27AE60"/>
+              <circle cx="50" cy="32" r="4" fill="#27AE60"/>
+              <circle cx="35" cy="48" r="4.5" fill="#E74C3C"/>
+              <circle cx="48" cy="45" r="4" fill="#F39C12"/>
+            </svg>
+          </div>
+          <h3 class="menu-card-title">The Carolyn Special</h3>
+          <p class="menu-card-desc">Spinach, olives, mushrooms, garlic, Canadian bacon, pesto sauce, artichoke hearts, and fresh tomatoes</p>
+          <span class="menu-card-tag">Specialty</span>
+        </div>
+
+        <div class="menu-card" data-category="pizza">
+          <div class="menu-card-icon">
+            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="40" cy="40" r="35" fill="#D4913A"/>
+              <circle cx="40" cy="40" r="30" fill="#E67E22" opacity="0.6"/>
+              <circle cx="32" cy="33" r="4" fill="#E74C3C"/>
+              <circle cx="48" cy="36" r="4" fill="#27AE60"/>
+              <circle cx="38" cy="50" r="3.5" fill="#F1C40F"/>
+              <circle cx="50" cy="48" r="3" fill="#E74C3C"/>
+            </svg>
+          </div>
+          <h3 class="menu-card-title">The Mexican</h3>
+          <p class="menu-card-desc">Bean sauce, onions, olives, beef, lettuce, tomatoes, salsa, pepperoncini peppers, and cheddar cheese</p>
+          <span class="menu-card-tag">Specialty</span>
+        </div>
+
+        <div class="menu-card" data-category="pizza">
+          <div class="menu-card-icon">
+            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="40" cy="40" r="35" fill="#D4913A"/>
+              <circle cx="40" cy="40" r="30" fill="#F5CBA7" opacity="0.8"/>
+              <circle cx="30" cy="32" r="6" fill="#A93226"/>
+              <circle cx="50" cy="38" r="5" fill="#A93226"/>
+              <circle cx="38" cy="50" r="5.5" fill="#F5CBA7" opacity="0.6"/>
+            </svg>
+          </div>
+          <h3 class="menu-card-title">More Specialties</h3>
+          <p class="menu-card-desc">We have over 20 specialty combinations! Call us or visit to see our full lineup of creative pizzas</p>
+          <span class="menu-card-tag">See Full Menu</span>
+        </div>
+
+        <!-- Calzones -->
+        <div class="menu-card hidden" data-category="calzones">
+          <div class="menu-card-icon">
+            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="40" cy="42" rx="34" ry="22" fill="#D4913A"/>
+              <path d="M10 42 Q40 15 70 42" fill="#E8A849"/>
+              <circle cx="30" cy="38" r="3" fill="#C0392B" opacity="0.6"/>
+              <circle cx="45" cy="35" r="3" fill="#27AE60" opacity="0.6"/>
+            </svg>
+          </div>
+          <h3 class="menu-card-title">Classic Calzones</h3>
+          <p class="menu-card-desc">Folded fresh dough stuffed with your favorite pizza toppings and baked to golden perfection</p>
+          <span class="menu-card-tag">Oven Fresh</span>
+        </div>
+
+        <div class="menu-card hidden" data-category="calzones">
+          <div class="menu-card-icon">
+            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="40" cy="42" rx="34" ry="22" fill="#E8A849"/>
+              <path d="M10 42 Q40 15 70 42" fill="#F0C27A"/>
+              <circle cx="28" cy="36" r="4" fill="#A93226" opacity="0.7"/>
+              <circle cx="42" cy="33" r="3.5" fill="#A93226" opacity="0.7"/>
+              <circle cx="54" cy="37" r="3" fill="#27AE60" opacity="0.7"/>
+            </svg>
+          </div>
+          <h3 class="menu-card-title">Specialty Calzones</h3>
+          <p class="menu-card-desc">Try our signature calzone combinations with premium ingredients and house-made fillings</p>
+          <span class="menu-card-tag">Chef's Choice</span>
+        </div>
+
+        <!-- Sandwiches -->
+        <div class="menu-card hidden" data-category="sandwiches">
+          <div class="menu-card-icon">
+            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="30" width="60" height="8" rx="4" fill="#E8A849"/>
+              <rect x="12" y="38" width="56" height="4" fill="#27AE60"/>
+              <rect x="12" y="42" width="56" height="4" fill="#E74C3C"/>
+              <rect x="12" y="46" width="56" height="4" fill="#F5CBA7"/>
+              <rect x="10" y="50" width="60" height="8" rx="4" fill="#D4913A"/>
+            </svg>
+          </div>
+          <h3 class="menu-card-title">Hot Sandwiches</h3>
+          <p class="menu-card-desc">Hearty sandwiches made on fresh bread with premium meats, cheeses, and crisp veggies</p>
+          <span class="menu-card-tag">Made Fresh</span>
+        </div>
+
+        <!-- Salads -->
+        <div class="menu-card hidden" data-category="salads">
+          <div class="menu-card-icon">
+            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="40" cy="45" rx="32" ry="18" fill="#e8e8e8" opacity="0.3"/>
+              <circle cx="30" cy="38" r="8" fill="#27AE60"/>
+              <circle cx="45" cy="35" r="7" fill="#2ECC71"/>
+              <circle cx="38" cy="48" r="6" fill="#27AE60"/>
+              <circle cx="52" cy="44" r="5" fill="#E74C3C"/>
+              <circle cx="28" cy="48" r="4" fill="#F39C12"/>
+            </svg>
+          </div>
+          <h3 class="menu-card-title">Fresh Salads</h3>
+          <p class="menu-card-desc">Crisp, refreshing salads made with the freshest greens and your choice of toppings and dressings</p>
+          <span class="menu-card-tag">Garden Fresh</span>
+        </div>
+
+        <!-- Sides & Drinks -->
+        <div class="menu-card hidden" data-category="sides">
+          <div class="menu-card-badge">Fan Fave</div>
+          <div class="menu-card-icon">
+            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+              <rect x="15" y="35" width="50" height="20" rx="6" fill="#D4913A"/>
+              <rect x="18" y="30" width="44" height="10" rx="3" fill="#E8A849"/>
+              <circle cx="28" cy="40" r="2" fill="#27AE60" opacity="0.6"/>
+              <circle cx="40" cy="42" r="2" fill="#27AE60" opacity="0.6"/>
+              <circle cx="52" cy="40" r="2" fill="#27AE60" opacity="0.6"/>
+            </svg>
+          </div>
+          <h3 class="menu-card-title">Garlic Bread</h3>
+          <p class="menu-card-desc">Our famous garlic bread appetizer &mdash; the perfect start to your meal, warm and buttery</p>
+          <span class="menu-card-tag">Appetizer</span>
+        </div>
+
+        <div class="menu-card hidden" data-category="sides">
+          <div class="menu-card-icon">
+            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+              <rect x="25" y="20" width="30" height="45" rx="4" fill="#F0C27A" opacity="0.4"/>
+              <rect x="28" y="25" width="24" height="35" rx="2" fill="#D4913A" opacity="0.6"/>
+              <ellipse cx="40" cy="22" rx="14" ry="4" fill="#F5F5F5" opacity="0.5"/>
+            </svg>
+          </div>
+          <h3 class="menu-card-title">Beer Selection</h3>
+          <p class="menu-card-desc">Domestic favorites and carefully selected craft &amp; micro-brewed beers on tap and in bottles</p>
+          <span class="menu-card-tag">Draft & Bottles</span>
+        </div>
+      </div>
+
+      <div class="menu-cta">
+        <a href="https://www.secondavenuepizza.com/SecondAvenuePizza-Menu2025.pdf" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10,9 9,9 8,9"/></svg>
+          View Full Menu (PDF)
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specials Marquee -->
+  <section class="specials-banner" id="specials">
+    <div class="container">
+      <div class="specials-grid">
+        <div class="special-card">
+          <div class="special-number">01</div>
+          <h3>The Schweitzer Ski Flake</h3>
+          <p>Spinach, tomatoes, feta cheese, garlic, mushrooms, black olives, Asiago cheese</p>
+          <div class="special-tag">Mountain Inspired</div>
+        </div>
+        <div class="special-card">
+          <div class="special-number">02</div>
+          <h3>The Carolyn Special</h3>
+          <p>Spinach, olives, mushrooms, garlic, Canadian bacon, pesto sauce, artichoke hearts, fresh tomatoes</p>
+          <div class="special-tag">House Favorite</div>
+        </div>
+        <div class="special-card">
+          <div class="special-number">03</div>
+          <h3>The Mexican</h3>
+          <p>Bean sauce, onions, olives, beef, lettuce, tomatoes, salsa, pepperoncini, cheddar</p>
+          <div class="special-tag">Bold & Spicy</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content">
+          <span class="section-tag">Our Story</span>
+          <h2 class="section-title">A Sandpoint <span class="text-gradient">Tradition</span></h2>
+          <p class="about-text">
+            Welcome to Second Avenue Pizza, where every pizza is a fresh, handcrafted creation
+            made just for you. We're not a franchise churning out identical pizzas &mdash; we're
+            your neighbors, dedicated to bringing you the freshest ingredients and the most
+            flavorful combinations in Sandpoint, Idaho.
+          </p>
+          <p class="about-text">
+            From our legendary 7-pound Juke Box Special to our carefully crafted specialty
+            pizzas, every bite tells a story of passion and quality. Come visit us on Second
+            Avenue, grab a slice, and experience pizza that's truly out of this world.
+          </p>
+          <div class="about-features">
+            <div class="feature">
+              <div class="feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+              </div>
+              <div>
+                <h4>Fresh Ingredients</h4>
+                <p>Locally sourced, always fresh, never frozen</p>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              </div>
+              <div>
+                <h4>Handcrafted Daily</h4>
+                <p>Every pizza made to order with care</p>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+              </div>
+              <div>
+                <h4>Community Favorite</h4>
+                <p>Proudly serving Sandpoint for years</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="about-img">
+            <img src="images/restaurant-2.jpg" alt="Inside Second Avenue Pizza">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / CTA Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-card">
+        <div class="contact-content">
+          <h2 class="section-title">Ready for <span class="text-gradient">Amazing Pizza?</span></h2>
+          <p>Give us a call to place your order for pickup or delivery. We can't wait to serve you!</p>
+          <div class="contact-actions">
+            <a href="tel:208-263-9321" class="btn btn-primary btn-lg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              Call 208-263-9321
+            </a>
+            <a href="https://maps.google.com/?q=215+S+2nd+Ave+Sandpoint+ID+83864" target="_blank" rel="noopener" class="btn btn-outline btn-lg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Visit Us
+            </a>
+          </div>
+        </div>
+        <div class="contact-decoration">
+          <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" class="contact-pizza">
+            <circle cx="150" cy="150" r="140" fill="#D4913A" opacity="0.15"/>
+            <circle cx="150" cy="150" r="120" fill="#C0392B" opacity="0.1"/>
+            <circle cx="100" cy="110" r="15" fill="#A93226" opacity="0.2"/>
+            <circle cx="190" cy="130" r="12" fill="#A93226" opacity="0.2"/>
+            <circle cx="160" cy="200" r="14" fill="#A93226" opacity="0.2"/>
+            <circle cx="120" cy="190" r="10" fill="#27AE60" opacity="0.2"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#hero" class="nav-logo">
+            <img src="images/logo.png" alt="Second Avenue Pizza" class="logo-img">
+            <span class="logo-text">Second Avenue<br><span class="logo-accent">Pizza</span></span>
+          </a>
+          <p class="footer-desc">Handcrafted, fresh pizzas in the heart of Sandpoint, Idaho. Every pizza is a creation made just for you.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#menu">Our Menu</a></li>
+            <li><a href="#specials">Specials</a></li>
+            <li><a href="#hours">Hours</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <ul>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              215 S. Second Avenue<br>Sandpoint, ID 83864
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              <a href="tel:208-263-9321">208-263-9321</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-hours">
+          <h4>Hours</h4>
+          <ul>
+            <li>Mon: Closed</li>
+            <li>Tue-Thu: 11am - 9pm</li>
+            <li>Fri-Sat: 11am - 9:30pm</li>
+            <li>Sun: 2pm - 8pm</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Second Avenue Pizza. All rights reserved.</p>
+        <p>215 S. Second Avenue, Sandpoint, Idaho 83864</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
