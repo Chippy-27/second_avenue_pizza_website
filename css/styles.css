@@ -67,7 +67,7 @@ body {
   overscroll-behavior-x: none;
   width: 100%;
   max-width: 100%;
-  touch-action: pan-y;
+  touch-action: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

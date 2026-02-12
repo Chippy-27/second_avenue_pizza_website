@@ -169,34 +169,18 @@ function initHeroAnimations() {
   }, 200);
 }
 
-// --- Prevent zoom-out and snap back on mobile ---
+// --- Prevent zoom-out past page (but allow zoom-in) ---
 function initPreventZoom() {
-  // Prevent iOS Safari gesture zoom
-  document.addEventListener('gesturestart', function (e) {
-    e.preventDefault();
-  });
-  document.addEventListener('gesturechange', function (e) {
-    e.preventDefault();
-  });
-
-  // Prevent multi-touch zoom
-  document.addEventListener('touchmove', function (e) {
-    if (e.touches.length > 1) {
-      e.preventDefault();
-    }
-  }, { passive: false });
-
-  // Snap back: if browser still allows zoom-out, force it back to 1x
+  // Snap back only when zoomed OUT (scale < 1), allow zoom-in freely
   if (window.visualViewport) {
-    var meta = document.querySelector('meta[name="viewport"]');
     var snapBack = function () {
-      if (window.visualViewport.scale < 1 || window.visualViewport.offsetLeft !== 0) {
+      if (window.visualViewport.scale < 1) {
+        var meta = document.querySelector('meta[name="viewport"]');
         meta.setAttribute('content',
-          'width=device-width, initial-scale=0.999, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover');
+          'width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover');
         requestAnimationFrame(function () {
           meta.setAttribute('content',
-            'width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover');
-          // Reset horizontal scroll to prevent left-shift
+            'width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover');
           window.scrollTo(0, window.scrollY);
           document.documentElement.scrollLeft = 0;
           document.body.scrollLeft = 0;
