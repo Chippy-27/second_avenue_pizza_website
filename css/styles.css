@@ -1357,6 +1357,22 @@ ul {
     padding: 120px 0 40px;
   }
 
+  .hero-bg-shapes {
+    display: none;
+  }
+
+  .hero-glow {
+    display: none;
+  }
+
+  .hero-logo-img {
+    filter: none;
+  }
+
+  .menu::before {
+    display: none;
+  }
+
   .hero-title {
     font-size: clamp(2rem, 7vw, 3rem);
   }
