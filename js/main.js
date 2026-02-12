@@ -171,23 +171,25 @@ function initHeroAnimations() {
 
 // --- Prevent zoom-out past page (but allow zoom-in) ---
 function initPreventZoom() {
-  // Snap back only when zoomed OUT (scale < 1), allow zoom-in freely
-  if (window.visualViewport) {
-    var snapBack = function () {
-      if (window.visualViewport.scale < 1) {
+  if (!window.visualViewport) return;
+
+  // After user lifts fingers, if they zoomed out past 1x, snap back
+  document.addEventListener('touchend', function () {
+    setTimeout(function () {
+      if (window.visualViewport.scale < 0.99) {
+        // Briefly lock to 1x to force snap-back
         var meta = document.querySelector('meta[name="viewport"]');
         meta.setAttribute('content',
-          'width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover');
-        requestAnimationFrame(function () {
+          'width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, viewport-fit=cover');
+        setTimeout(function () {
+          // Re-enable free zooming
           meta.setAttribute('content',
-            'width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover');
+            'width=device-width, initial-scale=1.0, viewport-fit=cover');
           window.scrollTo(0, window.scrollY);
           document.documentElement.scrollLeft = 0;
           document.body.scrollLeft = 0;
-        });
+        }, 50);
       }
-    };
-    window.visualViewport.addEventListener('resize', snapBack);
-    document.addEventListener('touchend', snapBack);
-  }
+    }, 100);
+  });
 }
