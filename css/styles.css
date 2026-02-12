@@ -54,6 +54,8 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -62,8 +64,20 @@ body {
   color: var(--color-text);
   line-height: 1.6;
   overflow-x: hidden;
+  overscroll-behavior-x: none;
+  width: 100%;
+  max-width: 100%;
+  touch-action: pan-y;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.page-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  clip-path: inset(0);
+  -webkit-clip-path: inset(0);
 }
 
 a {
@@ -86,6 +100,8 @@ ul {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 /* --- Typography --- */
@@ -347,6 +363,8 @@ ul {
   inset: 0;
   pointer-events: none;
   overflow: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .shape {
@@ -581,6 +599,7 @@ ul {
   padding: 120px 0;
   position: relative;
   background: var(--color-bg);
+  overflow: hidden;
 }
 
 .about-grid {
@@ -670,6 +689,7 @@ ul {
   padding: 120px 0;
   background: var(--color-bg-alt);
   position: relative;
+  overflow: hidden;
 }
 
 .menu::before {
@@ -833,6 +853,7 @@ ul {
   position: relative;
   background: var(--color-green-dark);
   color: white;
+  overflow: hidden;
 }
 
 .specials-banner::before {
@@ -908,6 +929,7 @@ ul {
 .hours {
   padding: 120px 0;
   background: var(--color-bg);
+  overflow: hidden;
 }
 
 .hours-grid {
@@ -991,6 +1013,12 @@ ul {
 .map-placeholder {
   height: 300px;
   background: var(--color-surface);
+  overflow: hidden;
+}
+
+.map-placeholder iframe {
+  width: 100%;
+  height: 100%;
 }
 
 .map-info {
@@ -1022,6 +1050,7 @@ ul {
 .contact {
   padding: 120px 0;
   background: var(--color-bg-alt);
+  overflow: hidden;
 }
 
 .contact-card {
@@ -1078,6 +1107,7 @@ ul {
   padding: 80px 0 40px;
   background: var(--color-green-dark);
   color: white;
+  overflow: hidden;
 }
 
 .footer .nav-logo {
@@ -1369,6 +1399,10 @@ ul {
 
   .special-card {
     padding: 28px 24px;
+  }
+
+  .contact-card {
+    padding: 36px 20px;
   }
 
   .footer-grid {
