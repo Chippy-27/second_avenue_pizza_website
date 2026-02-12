@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initMenuTabs();
   initSmoothScroll();
   initHeroAnimations();
-  initPreventZoom();
 });
 
 // --- Navbar scroll effect ---
@@ -167,29 +166,4 @@ function initHeroAnimations() {
       el.classList.add('visible');
     });
   }, 200);
-}
-
-// --- Prevent zoom-out past page (but allow zoom-in) ---
-function initPreventZoom() {
-  if (!window.visualViewport) return;
-
-  // After user lifts fingers, if they zoomed out past 1x, snap back
-  document.addEventListener('touchend', function () {
-    setTimeout(function () {
-      if (window.visualViewport.scale < 0.99) {
-        // Briefly lock to 1x to force snap-back
-        var meta = document.querySelector('meta[name="viewport"]');
-        meta.setAttribute('content',
-          'width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, viewport-fit=cover');
-        setTimeout(function () {
-          // Re-enable free zooming
-          meta.setAttribute('content',
-            'width=device-width, initial-scale=1.0, viewport-fit=cover');
-          window.scrollTo(0, window.scrollY);
-          document.documentElement.scrollLeft = 0;
-          document.body.scrollLeft = 0;
-        }, 50);
-      }
-    }, 100);
-  });
 }
