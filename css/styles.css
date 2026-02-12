@@ -54,6 +54,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+  overflow-x: hidden;
 }
 
 body {
@@ -61,6 +62,7 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text);
   line-height: 1.6;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -69,8 +71,6 @@ body {
   width: 100%;
   overflow: hidden;
   position: relative;
-  clip-path: inset(0);
-  -webkit-clip-path: inset(0);
 }
 
 a {
@@ -571,6 +571,7 @@ ul {
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--color-text-dim);
+  will-change: transform;
 }
 
 .marquee-dot {
@@ -1364,6 +1365,22 @@ ul {
 
   .menu::before {
     display: none;
+  }
+
+  /* Performance: remove expensive backdrop-filter on mobile scroll */
+  .navbar.scrolled::before {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .navbar.scrolled {
+    background: rgba(255, 255, 255, 0.98);
+  }
+
+  /* Remove backdrop-filter from specials cards on mobile */
+  .special-card {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
   }
 
   .hero-title {
