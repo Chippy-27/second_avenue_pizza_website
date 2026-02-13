@@ -47,18 +47,21 @@ function initMobileMenu() {
   const toggle = document.getElementById('navToggle');
   const links = document.getElementById('navLinks');
 
-  toggle.addEventListener('click', () => {
+  const toggleMenu = (e) => {
+    e.preventDefault();
     toggle.classList.toggle('active');
     links.classList.toggle('active');
-    document.body.style.overflow = links.classList.contains('active') ? 'hidden' : '';
-  });
+  };
 
-  // Close menu on link click
+  // Use touchend for instant response on mobile, click as fallback for desktop
+  toggle.addEventListener('touchend', toggleMenu);
+  toggle.addEventListener('click', toggleMenu);
+
+  // Close menu on link tap
   links.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       toggle.classList.remove('active');
       links.classList.remove('active');
-      document.body.style.overflow = '';
     });
   });
 }

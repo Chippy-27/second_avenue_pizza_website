@@ -312,8 +312,10 @@ ul {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 4px;
+  padding: 12px;
   z-index: 1001;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .nav-toggle span {
@@ -1319,10 +1321,12 @@ ul {
     align-items: center;
     justify-content: center;
     gap: 32px;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.2s ease, visibility 0.2s ease;
+    display: none;
     z-index: 1001;
+  }
+
+  .nav-links.active {
+    display: flex;
   }
 
   /* Disable scroll reveal animations on mobile */
@@ -1331,11 +1335,6 @@ ul {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
-  }
-
-  .nav-links.active {
-    opacity: 1;
-    visibility: visible;
   }
 
   .nav-links a {
