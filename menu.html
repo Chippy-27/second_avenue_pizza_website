@@ -8,9 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=6">
+  <link rel="stylesheet" href="css/styles.css?v=9">
 </head>
-<body>
+<body class="menu-page">
 <a href="tel:9869460708" class="preview-bubble">Want this site? Call (986) 946-0708</a>
 <div class="page-wrapper">
 
@@ -53,10 +53,24 @@
     </div>
   </section>
 
+  <!-- Sticky Menu Nav -->
+  <nav class="menu-page-nav">
+    <div class="container">
+      <a href="#befores" class="menu-nav-link">Befores</a>
+      <a href="#create-your-own" class="menu-nav-link">Create Your Own</a>
+      <a href="#specialty-pizzas" class="menu-nav-link">Specialty Pizzas</a>
+      <a href="#calzones" class="menu-nav-link">Calzones</a>
+      <a href="#sandwiches" class="menu-nav-link">Sandwiches</a>
+      <a href="#salads" class="menu-nav-link">Salads</a>
+    </div>
+  </nav>
+
   <!-- Befores -->
   <section class="menu-section" id="befores">
     <div class="container">
+      <span class="menu-section-tag">Starters</span>
       <h2 class="menu-section-title">Befores</h2>
+      <div class="menu-card-wrapper">
       <div class="menu-table">
         <div class="menu-table-header">
           <span></span>
@@ -106,13 +120,16 @@
           <span class="menu-price">19.50</span>
         </div>
       </div>
+      </div>
     </div>
   </section>
 
   <!-- Create Your Own -->
   <section class="menu-section menu-section-alt" id="create-your-own">
     <div class="container">
+      <span class="menu-section-tag">Build It</span>
       <h2 class="menu-section-title">Create Your Own</h2>
+      <div class="menu-card-wrapper">
       <div class="menu-table">
         <div class="menu-table-header">
           <span></span>
@@ -167,9 +184,11 @@
           <span class="menu-price">2.00</span>
         </div>
       </div>
+      </div>
       <p class="menu-small-note">Stuffed Crusts for extra charge &bull; *Mini Pizzas for Lunch</p>
 
       <h3 class="menu-subsection-title">Toppings</h3>
+      <div class="toppings-card">
       <div class="toppings-grid">
         <span>Pepperoni</span>
         <span>Pepperoncini Peppers</span>
@@ -203,14 +222,17 @@
         <span>Shrimp*</span>
         <span>Baby Clams*</span>
       </div>
-      <p class="menu-small-note">*Indicates toppings cost extra</p>
+      <p class="menu-small-note" style="margin-top: 12px;">*Indicates toppings cost extra</p>
+      </div>
     </div>
   </section>
 
   <!-- House Specialty Pizzas -->
   <section class="menu-section" id="specialty-pizzas">
     <div class="container">
+      <span class="menu-section-tag">Signatures</span>
       <h2 class="menu-section-title">House Specialty Pizzas</h2>
+      <div class="menu-card-wrapper">
       <div class="menu-table">
         <div class="menu-table-header">
           <span></span>
@@ -299,14 +321,17 @@
           <span class="menu-price">28.25</span>
         </div>
       </div>
+      </div>
     </div>
   </section>
 
   <!-- Calzones -->
   <section class="menu-section menu-section-alt" id="calzones">
     <div class="container">
+      <span class="menu-section-tag">Folded &amp; Stuffed</span>
       <h2 class="menu-section-title">Calzones</h2>
       <p class="menu-section-desc">A huge pocket pizza filled with toppings and cheeses and smothered with a meat or vegetarian sauce and topped with shredded parmesan.</p>
+      <div class="menu-list-wrapper">
       <div class="menu-list">
         <div class="menu-list-row">
           <div class="menu-item-info">
@@ -366,14 +391,17 @@
           <span class="menu-price">.75</span>
         </div>
       </div>
+      </div>
     </div>
   </section>
 
   <!-- Sandwiches -->
   <section class="menu-section" id="sandwiches">
     <div class="container">
+      <span class="menu-section-tag">Handhelds</span>
       <h2 class="menu-section-title">Sandwiches</h2>
       <p class="menu-section-desc">Served with Chips and your choice of Macaroni or Potato Salad. Green salad add 50&cent; extra.</p>
+      <div class="menu-list-wrapper">
       <div class="menu-list">
         <div class="menu-list-row">
           <span class="menu-item-name">Ultimate Bacon</span>
@@ -404,13 +432,16 @@
           <span class="menu-price">12.50</span>
         </div>
       </div>
+      </div>
     </div>
   </section>
 
   <!-- Salads -->
   <section class="menu-section menu-section-alt" id="salads">
     <div class="container">
+      <span class="menu-section-tag">Fresh &amp; Green</span>
       <h2 class="menu-section-title">Salads</h2>
+      <div class="menu-list-wrapper">
       <div class="menu-list">
         <div class="menu-list-row">
           <span class="menu-item-name">Garden Fresh Salad</span>
@@ -437,15 +468,16 @@
           <span class="menu-price">11.25</span>
         </div>
       </div>
-      <p class="menu-small-note">Dressings: Ranch, Blue Cheese, Thousand Island, Caesar, French, Italian, Honey Mustard, Hot Bacon</p>
+      <p class="menu-small-note" style="margin-top: 12px;">Dressings: Ranch, Blue Cheese, Thousand Island, Caesar, French, Italian, Honey Mustard, Hot Bacon</p>
+      </div>
     </div>
   </section>
 
   <!-- CTA -->
   <section class="menu-section menu-cta-section">
-    <div class="container" style="text-align: center;">
+    <div class="container">
       <h2 class="section-title">Ready to <span class="text-gradient">Order?</span></h2>
-      <p class="section-subtitle" style="margin-bottom: 32px;">Give us a call for pickup or delivery</p>
+      <p class="section-subtitle">Give us a call for pickup or delivery</p>
       <a href="tel:208-263-9321" class="btn btn-primary btn-lg">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
         Call 208-263-9321
@@ -505,6 +537,6 @@
   </footer>
 
 </div>
-  <script src="js/main.js?v=6"></script>
+  <script src="js/main.js?v=7"></script>
 </body>
 </html>

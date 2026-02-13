@@ -1227,29 +1227,107 @@ ul {
 /* ===========================
    MENU PAGE
    =========================== */
+.menu-page .navbar {
+  background: #ffffff;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--color-border-light);
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.06);
+}
+
+.menu-page .navbar::before {
+  display: none;
+}
 .menu-page-header {
-  padding: 120px 0 60px;
-  background: var(--gradient-hero);
+  padding: 140px 0 60px;
+  background: var(--color-green-dark);
   text-align: center;
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+
+.menu-page-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at top right, rgba(76, 187, 106, 0.2) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.menu-page-header .section-title {
+  color: white;
+}
+
+.menu-page-header .section-subtitle {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .menu-back-link {
-  display: inline-block;
-  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
   font-weight: 500;
-  color: var(--color-green);
-  margin-bottom: 20px;
+  color: var(--color-green-light);
+  margin-bottom: 24px;
+  padding: 6px 16px;
+  border: 1px solid rgba(76, 187, 106, 0.3);
+  border-radius: 100px;
+  transition: all 0.2s ease;
 }
 
 .menu-back-link:hover {
-  color: var(--color-green-dark);
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .menu-note {
-  font-size: 0.9rem;
-  color: var(--color-text-muted);
-  margin-top: 12px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 16px;
   font-style: italic;
+}
+
+/* Menu page navigation */
+.menu-page-nav {
+  background: white;
+  border-bottom: 1px solid var(--color-border);
+  padding: 16px 0;
+  position: sticky;
+  top: 64px;
+  z-index: 100;
+  box-shadow: var(--shadow-sm);
+}
+
+.menu-page-nav .container {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.menu-page-nav .container::-webkit-scrollbar {
+  display: none;
+}
+
+.menu-nav-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  padding: 8px 20px;
+  border-radius: 100px;
+  border: 1.5px solid var(--color-border);
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.menu-nav-link:hover {
+  color: var(--color-green);
+  border-color: var(--color-green);
 }
 
 .menu-section {
@@ -1265,10 +1343,18 @@ ul {
   font-size: clamp(1.75rem, 4vw, 2.5rem);
   font-weight: 700;
   color: var(--color-text);
-  margin-bottom: 12px;
-  padding-bottom: 12px;
-  border-bottom: 3px solid var(--color-green);
+  margin-bottom: 8px;
+}
+
+.menu-section-tag {
   display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-green);
+  margin-bottom: 12px;
 }
 
 .menu-section-desc {
@@ -1287,24 +1373,36 @@ ul {
   margin: 40px 0 16px;
 }
 
+/* Menu Card wrapper */
+.menu-card-wrapper {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  margin-top: 24px;
+}
+
+.menu-section-alt .menu-card-wrapper {
+  border-color: var(--color-border-light);
+}
+
 /* Menu Table (for items with size columns) */
 .menu-table {
   width: 100%;
-  margin-top: 24px;
 }
 
 .menu-table-header {
   display: grid;
   grid-template-columns: 1fr repeat(3, 80px);
   gap: 8px;
-  padding: 12px 16px;
-  background: var(--color-green-dark);
+  padding: 14px 24px;
+  background: var(--gradient-primary);
   color: white;
-  border-radius: var(--radius-md) var(--radius-md) 0 0;
   font-size: 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
 }
 
 .menu-table-header span {
@@ -1316,11 +1414,11 @@ ul {
 }
 
 /* 5-column variant for Create Your Own */
-.menu-section:nth-child(3) .menu-table-header {
+#create-your-own .menu-table-header {
   grid-template-columns: 1fr repeat(4, 70px);
 }
 
-.menu-section:nth-child(3) .menu-table-row {
+#create-your-own .menu-table-row {
   grid-template-columns: 1fr repeat(4, 70px);
 }
 
@@ -1328,7 +1426,7 @@ ul {
   display: grid;
   grid-template-columns: 1fr repeat(3, 80px);
   gap: 8px;
-  padding: 16px;
+  padding: 18px 24px;
   border-bottom: 1px solid var(--color-border-light);
   align-items: center;
   transition: background 0.15s ease;
@@ -1374,15 +1472,24 @@ ul {
 }
 
 /* Menu List (single price items) */
-.menu-list {
+.menu-list-wrapper {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
   margin-top: 24px;
+}
+
+.menu-section-alt .menu-list-wrapper {
+  border-color: var(--color-border-light);
 }
 
 .menu-list-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px;
+  padding: 18px 24px;
   border-bottom: 1px solid var(--color-border-light);
   gap: 16px;
   transition: background 0.15s ease;
@@ -1398,6 +1505,7 @@ ul {
 
 .menu-list-row .menu-price {
   flex-shrink: 0;
+  font-size: 1rem;
 }
 
 .menu-small-note {
@@ -1405,26 +1513,44 @@ ul {
   color: var(--color-text-dim);
   margin-top: 16px;
   font-style: italic;
+  padding: 0 24px;
 }
 
 /* Toppings Grid */
+.toppings-card {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  box-shadow: var(--shadow-card);
+  margin-top: 12px;
+}
+
+.menu-section-alt .toppings-card {
+  border-color: var(--color-border-light);
+}
+
 .toppings-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 8px 16px;
-  margin-top: 12px;
+  gap: 4px 24px;
 }
 
 .toppings-grid span {
   font-size: 0.9rem;
   color: var(--color-text-muted);
-  padding: 6px 0;
+  padding: 8px 0;
   border-bottom: 1px solid var(--color-border-light);
 }
 
 .menu-cta-section {
   padding: 80px 0;
   background: var(--color-bg);
+  text-align: center;
+}
+
+.menu-cta-section .section-subtitle {
+  margin-bottom: 32px;
 }
 
 /* ===========================
@@ -1702,11 +1828,11 @@ ul {
     font-size: 0.85rem;
   }
 
-  .menu-section:nth-child(3) .menu-table-header {
+  #create-your-own .menu-table-header {
     grid-template-columns: 1fr repeat(4, 48px);
   }
 
-  .menu-section:nth-child(3) .menu-table-row {
+  #create-your-own .menu-table-row {
     grid-template-columns: 1fr repeat(4, 48px);
   }
 
