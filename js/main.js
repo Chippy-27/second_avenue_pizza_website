@@ -15,8 +15,13 @@ document.addEventListener('DOMContentLoaded', () => {
 // --- Navbar scroll effect ---
 function initNavbar() {
   const navbar = document.getElementById('navbar');
+  const bubble = document.querySelector('.preview-bubble');
   const onScroll = () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 50);
+    const scrolled = window.scrollY > 50;
+    navbar.classList.toggle('scrolled', scrolled);
+    if (bubble) {
+      bubble.style.top = scrolled ? '56px' : '';
+    }
   };
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();

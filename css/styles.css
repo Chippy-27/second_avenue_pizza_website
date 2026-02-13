@@ -45,22 +45,22 @@
 /* --- Preview Bubble --- */
 .preview-bubble {
   position: fixed;
-  top: 6px;
+  top: 74px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1100;
+  z-index: 999;
   background: var(--color-green-dark);
   color: white;
   font-family: var(--font-body);
   font-size: 0.75rem;
   font-weight: 600;
   padding: 6px 16px;
-  border-radius: 100px;
+  border-radius: 0 0 12px 12px;
   white-space: nowrap;
   text-decoration: none;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   opacity: 0.9;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease, top 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .preview-bubble:hover {
@@ -1335,6 +1335,12 @@ ul {
 }
 
 @media (max-width: 768px) {
+  .preview-bubble {
+    top: 62px;
+    font-size: 0.7rem;
+    padding: 5px 12px;
+  }
+
   .nav-links {
     position: fixed;
     top: 0;
